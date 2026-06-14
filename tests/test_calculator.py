@@ -10,7 +10,6 @@ HOW TO RUN:
     From the project root with the virtual environment active:
         pytest tests/test_calculator.py -v
 """
-import math
 import pytest
 from calculator import Calculator
 
@@ -24,14 +23,13 @@ def test__add__given_two_positive_floats__returns_their_sum() -> None:
     result = calc.add(1.0, 2.0)
 
     # ASSERT
-    assert result == 3.0
+    assert result == pytest.approx(3.0, rel=1e-8)
 
 
 @pytest.mark.parametrize("x", [0.0, 1.5, -3.7, 1e15])
 def test__add__given_zero_as_second_operand__returns_first_operand(x: float) -> None:
-    # We use math.isclose with rel_tol=1e-8 because floating-point arithmetic is not
-    # exact — rel_tol scales with the magnitude of the numbers, which is correct when
-    # operands can span many orders of magnitude (e.g., 1.5 vs. 1e15).
+    # pytest.approx with rel=1e-8 scales tolerance with the magnitude of the numbers,
+    # which is correct when operands can span many orders of magnitude (e.g., 1.5 vs. 1e15).
     # ARRANGE
     calc = Calculator()
 
@@ -39,7 +37,7 @@ def test__add__given_zero_as_second_operand__returns_first_operand(x: float) -> 
     result = calc.add(x, 0.0)
 
     # ASSERT
-    assert math.isclose(result, x, rel_tol=1e-8)
+    assert result == pytest.approx(x, rel=1e-8)
 
 
 @pytest.mark.parametrize("a,b", [(1.0, 2.0), (-1.5, 3.5), (1e10, -1e10), (0.0, 0.0)])
@@ -55,7 +53,7 @@ def test__add__given_reversed_operands__returns_same_result(a: float, b: float) 
     backward = calc.add(b, a)
 
     # ASSERT
-    assert math.isclose(forward, backward, rel_tol=1e-8)
+    assert forward == pytest.approx(backward, rel=1e-8)
 
 
 def test__add__given_near_max_float_inputs__raises_overflow_error() -> None:
