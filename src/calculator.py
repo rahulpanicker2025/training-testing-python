@@ -1,16 +1,4 @@
-"""Domain implementation of a floating-point Calculator.
-
-WHY THIS EXISTS:
-    This module is the production code under test. In test-driven development (TDD)
-    you always have two files: the implementation (this file) and the tests
-    (tests/test_calculator.py). The tests describe the contract; this file fulfills it.
-
-ROLE:
-    Simple arithmetic domain object. No dependencies on external libraries beyond
-    Python's standard library.
-"""
 import math
-
 
 class Calculator:
     """Performs arithmetic operations on floating-point numbers.
