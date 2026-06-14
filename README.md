@@ -1,4 +1,9 @@
 # Testing training
+
+[![CI](https://github.com/sefop/training-testing-python/actions/workflows/ci.yml/badge.svg)](https://github.com/sefop/training-testing-python/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/python-3.12-blue)](https://www.python.org/downloads/release/python-3120/)
+[![License](https://img.shields.io/github/license/sefop/training-testing-python)](LICENSE)
+
 Learn how to do unit testing.
 
 ## Installation
