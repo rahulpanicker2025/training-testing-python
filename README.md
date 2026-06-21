@@ -54,3 +54,6 @@ This command generates a htmlcov/ folder; open htmlcov/index.html in a browser f
 pytest --cov=src --cov-report=html
 ```
 
+## Exercises
+
+Check out the exercises in the folder [exercises](exercises) for detailed instructions.
