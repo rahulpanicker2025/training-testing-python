@@ -4,7 +4,10 @@
 [![Python](https://img.shields.io/badge/python-3.12-blue)](https://www.python.org/downloads/release/python-3120/)
 [![License](https://img.shields.io/github/license/sefop/training-testing-python)](LICENSE)
 
-Learn how to do unit testing and test-driven development (TDD)
+Learn how to:
+- Do unit testing
+- Interpret code coverage
+- Do test-driven development (also known as 'TDD')
 
 ## Installation
 
