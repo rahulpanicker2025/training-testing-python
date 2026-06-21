@@ -1,15 +1,3 @@
-"""Contract tests for Calculator.add defined in src/calculator.py.
-
-WHY THIS EXISTS:
-    In TDD, tests are written before (or alongside) the implementation. This file
-    describes the *contract* of Calculator.add — what it must do — independently
-    of how it does it. If the implementation is rewritten from scratch, these tests
-    should still pass unchanged, because the observable behavior has not changed.
-
-HOW TO RUN:
-    From the project root with the virtual environment active:
-        pytest tests/test_calculator.py -v
-"""
 import sys
 import pytest
 from calculator import Calculator
